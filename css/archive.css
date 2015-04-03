@@ -1,0 +1,279 @@
+<!-- 		<style>
+			*{
+				margin:0;
+				padding: 0;
+			}
+			body{
+				margin:5px;
+				position: relative;
+			}
+			.absolute_center{
+				position: absolute;
+				top:0;
+				bottom:0;
+				left:0;
+				right:0;
+				margin: auto auto;
+			}
+
+
+
+			section#graphic_intro{
+				
+				position: absolute;
+				top:0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #080130;
+				background-image: url(img/lab-bg.jpg);
+				background-size: cover;
+				overflow: hidden;
+			}
+			section#graphic_intro:before{
+				transition:1s;
+				opacity: 1;
+				content: "";
+				position: absolute;
+				left: 0;
+				top:0;
+				width:100%;
+				height: 100%;
+				background-color: #080130;
+				display: block;
+			}
+			section#graphic_intro.activatebg:before{
+				opacity: 0;
+			}
+
+
+
+			section#graphic_intro nav{
+				transition:1s ease-in-out;
+				position: absolute;
+				bottom:-10px;
+				left:0;
+				width:100%;
+				background-color: #FFF;
+				height: 50px;
+				border-top: 5px solid #f2f2f2;
+				opacity: 0;
+			}
+			section#graphic_intro nav.active{
+				bottom:0px;
+				opacity: 1;
+			}
+			section#graphic_intro nav ul{
+				float: right;
+				vertical-align: top;
+				height: 100%;
+				width: 60%;
+				background-color: #f2f2f2;
+				display: inline-block;
+				margin: 0;
+				list-style: none;
+				padding: 0;
+				margin-right: 5%;
+			}
+			section#graphic_intro nav ul li{
+				vertical-align: top;
+				height: 100%;
+				display: inline-block;
+				width:25%;
+				text-align: center;
+				background-color: #FFF;
+				float: left;
+			}
+			section#graphic_intro nav ul li a{
+				transition:0.2s ease-out;
+				text-align: center;
+				width:100%;
+				height: 100%;
+				line-height: 50px;
+				display: block;
+				text-decoration: none;
+				font-family: sans-serif;
+				font-size: 13px;
+				color: #1e1e1e;
+				text-transform: uppercase;
+				border-left:2px solid #f2f2f2;
+				border-right:2px solid #f2f2f2;
+			}
+			section#graphic_intro nav ul li a:hover{
+				background-color: #f2f2f2;
+				color: #080130;
+			}
+
+
+
+
+			section#graphic_intro ul#projects{
+				opacity: 0;
+				transition:0.4s ease-out;
+				width: 100%;
+				height: 200px;
+				position: absolute;
+				bottom: -145px;
+				left: 0;
+				display: block;
+				background-color: #000728;
+				border-top: 1px solid #FFF;
+			}
+			section#graphic_intro ul#projects.active{
+				opacity: 1;
+				bottom: 55px;
+			}
+
+
+
+			section#graphic_intro #logo{
+				transition:0.4s ease-out;
+				opacity: 0;
+				top: 0px;
+				bottom: 350px;
+				width: 225px;
+				height: 111px;
+				display: block;
+				background-image: url(img/lab-logo.svg);
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position:center;
+
+			}
+			section#graphic_intro #logo.active{
+				opacity: 1;
+				top: 0px;
+				bottom: 400px;
+			}
+			section#graphic_intro #stage{
+				  transition:1s;
+				  opacity: 0;
+				  top:40px;
+				  text-align: center;
+				  width: 100%;
+				  max-height: 350px;
+			}
+			section#graphic_intro #stage.active{
+				opacity: 1;
+			}
+			section#graphic_intro #stage>div{
+				display: inline-block;
+				height: 100%;
+				width: 160px;
+				vertical-align: top;
+				position: relative;
+				transition:0.4s;
+				margin: 0 -2px;
+			}
+			section#graphic_intro #stage>div>span{
+				position: absolute;
+				display: inline-block;
+				width: 140px;
+				left: 10px;
+			}
+
+			section#graphic_intro #stage>div>span.dot{
+				transition:0.3s ease-out;
+				height: 140px;
+				background-color: rgba(255,255,255,0.1);
+				top: 20%;
+				border-radius: 50%;
+			}
+			
+			section#graphic_intro #stage>div>span.dot:after{
+				transition:0.3s ease-in-out;
+				content: "";
+				position: absolute;
+				top: 30px;
+				left: 30px;
+				width: 80px;
+				height: 80px;
+				display: block;
+				/*border:1px solid #FFF;*/
+				border-radius: 50%;
+				background-image:url(img/icon.svg);
+				background-size: cover;
+				background-repeat:no-repeat;
+			}
+			section#graphic_intro #stage>div>span.dot:before{
+				transition:0.3s ease-in-out;
+				content: "";
+				position: absolute;
+				top: -1px;
+				left: -1px;
+				width: 140px;
+				height: 140px;
+				display: block;
+				border:1px dashed rgba(255,255,255,0);
+				border-radius: 50%;
+
+				-webkit-animation-name: spin;
+			    -webkit-animation-duration: 10s;
+			    -webkit-animation-iteration-count: infinite;
+			    -webkit-animation-timing-function: linear;
+			}
+
+			section#graphic_intro #stage>div>span.shadow{
+				transition:0.3s ease-out;
+				height: 15px;
+				width: 100px;
+				left: 30px;
+				background-color: rgba(0, 1, 26, 0.1);
+				bottom:27%;
+				border-radius: 50%;
+
+				-webkit-filter: blur(5px);
+				-moz-filter: blur(5px);
+				-o-filter: blur(5px);
+				-ms-filter: blur(5px);
+				filter: blur(5px);
+			}
+
+
+			section#graphic_intro #stage>div:hover span.dot{
+				top: 15%;
+				/*box-shadow: 0px 0px 8px rgba(255,255,255,0.3);*/
+				background-color: rgba(255,255,255,0.05);
+				border:2px solid #FFF;
+			}
+			section#graphic_intro #stage>div:hover span.dot:before{
+				top: -11px;
+				left: -11px;
+				width: 160px;
+				height: 160px;
+				border:1px dashed rgba(255,255,255,0.2);
+			}
+			section#graphic_intro #stage>div:hover span.dot:after{
+				-ms-transform: scale(1.1,1.1); /* IE 9 */
+			    -webkit-transform: scale(1.1,1.1); /* Safari */
+			    transform: scale(1.1,1.1);
+			}
+			
+			section#graphic_intro #stage>div:hover span.shadow{
+				background-color: rgba(0,0,0,0.1);
+				bottom:24%;
+
+				width: 100px;
+				left: 30px;
+
+				-webkit-filter: blur(10px);
+				-moz-filter: blur(10px);
+				-o-filter: blur(10px);
+				-ms-filter: blur(10px);
+				filter: blur(10px);
+			}
+
+
+
+
+
+		    @-webkit-keyframes spin { 
+		        from { 
+		            -webkit-transform: rotate(0deg); 
+		        } to { 
+		            -webkit-transform: rotate(90deg); 
+		        }
+		    }
+
+
+		</style> -->

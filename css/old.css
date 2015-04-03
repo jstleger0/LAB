@@ -1,0 +1,57 @@
+<!-- 		<style>
+
+			
+
+
+
+
+			
+
+
+
+			
+			
+
+			
+			
+			
+			
+
+			
+
+
+			
+			section#graphic_intro #stage>div:hover span.dot:after{
+				-ms-transform: scale(1.1,1.1); /* IE 9 */
+			    -webkit-transform: scale(1.1,1.1); /* Safari */
+			    transform: scale(1.1,1.1);
+			}
+			
+			section#graphic_intro #stage>div:hover span.shadow{
+				background-color: rgba(0,0,0,0.1);
+				bottom:24%;
+
+				width: 100px;
+				left: 30px;
+
+				-webkit-filter: blur(10px);
+				-moz-filter: blur(10px);
+				-o-filter: blur(10px);
+				-ms-filter: blur(10px);
+				filter: blur(10px);
+			}
+
+
+
+
+
+		    @-webkit-keyframes spin { 
+		        from { 
+		            -webkit-transform: rotate(0deg); 
+		        } to { 
+		            -webkit-transform: rotate(90deg); 
+		        }
+		    }
+
+
+		</style> -->

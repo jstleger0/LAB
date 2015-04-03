@@ -1,0 +1,837 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+  color: #000;
+  font-family: sans-serif;
+  font-family: 'Nunito' Verdana sans-serif;
+}
+p {
+  font-weight: lighter;
+  font-size: 12px;
+}
+.absolute_center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 5px;
+  position: relative;
+  display: block;
+  min-height: 98.5vh;
+}
+body #logo {
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  top: 0px;
+  bottom: 400px;
+  width: 225px;
+  height: 111px;
+  display: block;
+  background-image: url("../img/lab-logo.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transform: translate3d(0px, 30px, 0px);
+  -moz-transform: translate3d(0px, 30px, 0px);
+  -ms-transform: translate3d(0px, 30px, 0px);
+  -o-transform: translate3d(0px, 30px, 0px);
+  transform: translate3d(0px, 30px, 0px);
+  transition-delay: 0.5s;
+  -webkit-animation: bob_text 2s infinite ease-in-out alternate;
+  -moz-animation: bob_text 2s infinite ease-in-out alternate;
+  -ms-animation: bob_text 2s infinite ease-in-out alternate;
+  -o-animation: bob_text 2s infinite ease-in-out alternate;
+  animation: bob_text 2s infinite ease-in-out alternate;
+}
+body #logo.active {
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+body #caption {
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  bottom: 0;
+  top: 380px;
+  width: 80%;
+  max-width: 550px;
+  height: 80px;
+  display: block;
+  text-align: center;
+  color: #fff;
+  line-height: 20px;
+  letter-spacing: 1px;
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -webkit-transform: translate3d(0px, 20px, 0px);
+  -moz-transform: translate3d(0px, 20px, 0px);
+  -ms-transform: translate3d(0px, 20px, 0px);
+  -o-transform: translate3d(0px, 20px, 0px);
+  transform: translate3d(0px, 20px, 0px);
+  -webkit-animation: bob_text 2s infinite ease-in-out alternate;
+  -moz-animation: bob_text 2s infinite ease-in-out alternate;
+  -ms-animation: bob_text 2s infinite ease-in-out alternate;
+  -o-animation: bob_text 2s infinite ease-in-out alternate;
+  animation: bob_text 2s infinite ease-in-out alternate;
+}
+body #caption.active {
+  opacity: 0.9;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -ms-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+@-moz-keyframes bob {
+  0% {
+    -webkit-transform: translate3d(0px, -4px, 0px);
+    -moz-transform: translate3d(0px, -4px, 0px);
+    -ms-transform: translate3d(0px, -4px, 0px);
+    -o-transform: translate3d(0px, -4px, 0px);
+    transform: translate3d(0px, -4px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 4px, 0px);
+    -moz-transform: translate3d(0px, 4px, 0px);
+    -ms-transform: translate3d(0px, 4px, 0px);
+    -o-transform: translate3d(0px, 4px, 0px);
+    transform: translate3d(0px, 4px, 0px);
+  }
+}
+@-webkit-keyframes bob {
+  0% {
+    -webkit-transform: translate3d(0px, -4px, 0px);
+    -moz-transform: translate3d(0px, -4px, 0px);
+    -ms-transform: translate3d(0px, -4px, 0px);
+    -o-transform: translate3d(0px, -4px, 0px);
+    transform: translate3d(0px, -4px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 4px, 0px);
+    -moz-transform: translate3d(0px, 4px, 0px);
+    -ms-transform: translate3d(0px, 4px, 0px);
+    -o-transform: translate3d(0px, 4px, 0px);
+    transform: translate3d(0px, 4px, 0px);
+  }
+}
+@-o-keyframes bob {
+  0% {
+    -webkit-transform: translate3d(0px, -4px, 0px);
+    -moz-transform: translate3d(0px, -4px, 0px);
+    -ms-transform: translate3d(0px, -4px, 0px);
+    -o-transform: translate3d(0px, -4px, 0px);
+    transform: translate3d(0px, -4px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 4px, 0px);
+    -moz-transform: translate3d(0px, 4px, 0px);
+    -ms-transform: translate3d(0px, 4px, 0px);
+    -o-transform: translate3d(0px, 4px, 0px);
+    transform: translate3d(0px, 4px, 0px);
+  }
+}
+@keyframes bob {
+  0% {
+    -webkit-transform: translate3d(0px, -4px, 0px);
+    -moz-transform: translate3d(0px, -4px, 0px);
+    -ms-transform: translate3d(0px, -4px, 0px);
+    -o-transform: translate3d(0px, -4px, 0px);
+    transform: translate3d(0px, -4px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 4px, 0px);
+    -moz-transform: translate3d(0px, 4px, 0px);
+    -ms-transform: translate3d(0px, 4px, 0px);
+    -o-transform: translate3d(0px, 4px, 0px);
+    transform: translate3d(0px, 4px, 0px);
+  }
+}
+body nav#main_menu {
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  height: 50px;
+  border-top: 5px solid #f2f2f2;
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+body nav#main_menu.active {
+  bottom: 0;
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+body nav#main_menu ul {
+  float: right;
+  vertical-align: top;
+  height: 100%;
+  width: 60%;
+  background-color: #f2f2f2;
+  display: inline-block;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  margin-right: 5%;
+  border-right: 2px solid #f2f2f2;
+}
+body nav#main_menu ul li {
+  vertical-align: top;
+  height: 100%;
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+  background-color: #fff;
+  float: left;
+}
+body nav#main_menu ul li a {
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 50px;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  font-size: 11px;
+  color: #1e1e1e;
+  text-transform: uppercase;
+  border-left: 2px solid #f2f2f2;
+  z-index: 1;
+  overflow: hidden;
+}
+body nav#main_menu ul li a:after {
+  -webkit-transition: 0.4s ease-out;
+  -moz-transition: 0.4s ease-out;
+  -ms-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  content: " ";
+  width: 0;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: -25px;
+  background-color: #f2f2f2;
+  z-index: -1;
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  transform: rotate(10deg);
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+body nav#main_menu ul li a:hover {
+  color: #080130;
+}
+body nav#main_menu ul li a:hover:after {
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  width: 110%;
+  left: -5%;
+}
+body ul#projects_menu {
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -webkit-transition: 0.4s ease-out;
+  -moz-transition: 0.4s ease-out;
+  -ms-transition: 0.4s ease-out;
+  -o-transition: 0.4s ease-out;
+  transition: 0.4s ease-out;
+  width: 100%;
+  height: 200px;
+  position: absolute;
+  bottom: -145px;
+  left: 0;
+  display: block;
+  background-color: #000728;
+  border-top: 1px solid #fff;
+}
+body ul#projects_menu.active {
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  bottom: 55px;
+}
+body section#container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #080130;
+  background-image: url("../img/lab-bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+body section#container:before {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  content: "loading";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #080130;
+  display: block;
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+}
+body section#container.bg_cover:before {
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+body section#container #stage {
+  -webkit-transition: 1s ease-out;
+  -moz-transition: 1s ease-out;
+  -ms-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  transition: 1s ease-out;
+  top: 40px;
+  text-align: center;
+  width: 100%;
+  max-height: 350px;
+}
+body section#container #stage >div {
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  display: inline-block;
+  height: 100%;
+  width: 160px;
+  vertical-align: top;
+  position: relative;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  margin: 0 -2px;
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  -o-animation-delay: 2s;
+  animation-delay: 2s;
+}
+body section#container #stage >div:nth-child(1) >span {
+  -webkit-animation: bob 1.3s infinite ease-in-out alternate 0.5s;
+  -moz-animation: bob 1.3s infinite ease-in-out alternate 0.5s;
+  -ms-animation: bob 1.3s infinite ease-in-out alternate 0.5s;
+  -o-animation: bob 1.3s infinite ease-in-out alternate 0.5s;
+  animation: bob 1.3s infinite ease-in-out alternate 0.5s;
+}
+body section#container #stage >div:nth-child(2) >span {
+  -webkit-animation: bob 1.3s infinite ease-in-out alternate 1s;
+  -moz-animation: bob 1.3s infinite ease-in-out alternate 1s;
+  -ms-animation: bob 1.3s infinite ease-in-out alternate 1s;
+  -o-animation: bob 1.3s infinite ease-in-out alternate 1s;
+  animation: bob 1.3s infinite ease-in-out alternate 1s;
+}
+body section#container #stage >div:nth-child(3) >span {
+  -webkit-animation: bob 1.3s infinite ease-in-out alternate 1.5s;
+  -moz-animation: bob 1.3s infinite ease-in-out alternate 1.5s;
+  -ms-animation: bob 1.3s infinite ease-in-out alternate 1.5s;
+  -o-animation: bob 1.3s infinite ease-in-out alternate 1.5s;
+  animation: bob 1.3s infinite ease-in-out alternate 1.5s;
+}
+body section#container #stage >div:nth-child(4) >span {
+  -webkit-animation: bob 1.3s infinite ease-in-out alternate 2s;
+  -moz-animation: bob 1.3s infinite ease-in-out alternate 2s;
+  -ms-animation: bob 1.3s infinite ease-in-out alternate 2s;
+  -o-animation: bob 1.3s infinite ease-in-out alternate 2s;
+  animation: bob 1.3s infinite ease-in-out alternate 2s;
+}
+body section#container #stage >div >span {
+  position: absolute;
+  display: inline-block;
+  width: 140px;
+  left: 10px;
+}
+body section#container #stage >div >span.dot {
+  -webkit-transition: 4s ease-out;
+  -moz-transition: 4s ease-out;
+  -ms-transition: 4s ease-out;
+  -o-transition: 4s ease-out;
+  transition: 4s ease-out;
+  height: 140px;
+  background-color: rgba(255,255,255,0.1);
+  top: 40%;
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  border: 1px dotted rgba(255,255,255,0);
+  background-size: 80px 80px;
+  background-image: url("../img/icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body section#container #stage >div >span.dot:after {
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 140px;
+  height: 140px;
+  display: block;
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  border: 1px dashed #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: spin 40s infinite linear;
+  -moz-animation: spin 40s infinite linear;
+  -ms-animation: spin 40s infinite linear;
+  -o-animation: spin 40s infinite linear;
+  animation: spin 40s infinite linear;
+}
+body section#container #stage >div >span.dot:before {
+  -webkit-transition: 1s ease-in-out;
+  -moz-transition: 1s ease-in-out;
+  -ms-transition: 1s ease-in-out;
+  -o-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 140px;
+  height: 140px;
+  display: block;
+  opacity: 0.4;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  border: 1px solid #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: spin 10s infinite linear;
+  -moz-animation: spin 10s infinite linear;
+  -ms-animation: spin 10s infinite linear;
+  -o-animation: spin 10s infinite linear;
+  animation: spin 10s infinite linear;
+}
+@-moz-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+body section#container #stage >div >span.shadow {
+  -webkit-transition: 0.3s ease-out;
+  -moz-transition: 0.3s ease-out;
+  -ms-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  height: 15px;
+  width: 100px;
+  left: 30px;
+  background-color: #00011a;
+  bottom: 35%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -ms-filter: blur(5px);
+  -o-filter: blur(5px);
+  filter: blur(5px);
+}
+body section#container #stage.active >div:nth-child(1) >span {
+  -webkit-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -moz-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -ms-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -o-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1); /* custom */
+  transition-delay: 0.1s;
+}
+body section#container #stage.active >div:nth-child(1) >span.dot {
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  top: 20%;
+}
+body section#container #stage.active >div:nth-child(1) >span.shadow {
+  bottom: 27%;
+  opacity: 0.1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+}
+body section#container #stage.active >div:nth-child(2) >span {
+  -webkit-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -moz-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -ms-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -o-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1); /* custom */
+  transition-delay: 0.2s;
+}
+body section#container #stage.active >div:nth-child(2) >span.dot {
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  top: 20%;
+}
+body section#container #stage.active >div:nth-child(2) >span.shadow {
+  bottom: 27%;
+  opacity: 0.1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+}
+body section#container #stage.active >div:nth-child(3) >span {
+  -webkit-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -moz-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -ms-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -o-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1); /* custom */
+  transition-delay: 0.3s;
+}
+body section#container #stage.active >div:nth-child(3) >span.dot {
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  top: 20%;
+}
+body section#container #stage.active >div:nth-child(3) >span.shadow {
+  bottom: 27%;
+  opacity: 0.1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+}
+body section#container #stage.active >div:nth-child(4) >span {
+  -webkit-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -moz-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -ms-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  -o-transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1);
+  transition: all 0.8s cubic-bezier(0.31, 1.53, 0.66, 1); /* custom */
+  transition-delay: 0.4s;
+}
+body section#container #stage.active >div:nth-child(4) >span.dot {
+  opacity: 1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  top: 20%;
+}
+body section#container #stage.active >div:nth-child(4) >span.shadow {
+  bottom: 27%;
+  opacity: 0.1;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=10);
+}
+body section#container #stage.active >div:hover {
+  margin: auto 40px;
+}
+body section#container #stage.active >div:hover >span.dot {
+  -webkit-transition: all 0.4s ease-in-out;
+  -moz-transition: all 0.4s ease-in-out;
+  -ms-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  border: 1px dotted rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0);
+}
+body section#container #stage.active >div:hover >span.dot:before {
+  opacity: 0.3;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  top: -1px;
+  left: 39px;
+  width: 60px;
+  height: 140px;
+}
+body section#container #stage.active >div:hover >span.dot:after {
+  opacity: 0.6;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  top: -6px;
+  left: -6px;
+  width: 150px;
+  height: 150px;
+}
+body section#container #stage.active >div:hover >span.shadow {
+  -webkit-transform: translate3d(0px, 30%, 0px);
+  -moz-transform: translate3d(0px, 30%, 0px);
+  -ms-transform: translate3d(0px, 30%, 0px);
+  -o-transform: translate3d(0px, 30%, 0px);
+  transform: translate3d(0px, 30%, 0px);
+  opacity: 0.05;
+  -webkit-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5);
+  -moz-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5);
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5);
+  -o-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=5);
+}
+@-moz-keyframes bob_text {
+  0% {
+    -webkit-transform: translate3d(0px, -2px, 0px);
+    -moz-transform: translate3d(0px, -2px, 0px);
+    -ms-transform: translate3d(0px, -2px, 0px);
+    -o-transform: translate3d(0px, -2px, 0px);
+    transform: translate3d(0px, -2px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 2px, 0px);
+    -moz-transform: translate3d(0px, 2px, 0px);
+    -ms-transform: translate3d(0px, 2px, 0px);
+    -o-transform: translate3d(0px, 2px, 0px);
+    transform: translate3d(0px, 2px, 0px);
+  }
+}
+@-webkit-keyframes bob_text {
+  0% {
+    -webkit-transform: translate3d(0px, -2px, 0px);
+    -moz-transform: translate3d(0px, -2px, 0px);
+    -ms-transform: translate3d(0px, -2px, 0px);
+    -o-transform: translate3d(0px, -2px, 0px);
+    transform: translate3d(0px, -2px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 2px, 0px);
+    -moz-transform: translate3d(0px, 2px, 0px);
+    -ms-transform: translate3d(0px, 2px, 0px);
+    -o-transform: translate3d(0px, 2px, 0px);
+    transform: translate3d(0px, 2px, 0px);
+  }
+}
+@-o-keyframes bob_text {
+  0% {
+    -webkit-transform: translate3d(0px, -2px, 0px);
+    -moz-transform: translate3d(0px, -2px, 0px);
+    -ms-transform: translate3d(0px, -2px, 0px);
+    -o-transform: translate3d(0px, -2px, 0px);
+    transform: translate3d(0px, -2px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 2px, 0px);
+    -moz-transform: translate3d(0px, 2px, 0px);
+    -ms-transform: translate3d(0px, 2px, 0px);
+    -o-transform: translate3d(0px, 2px, 0px);
+    transform: translate3d(0px, 2px, 0px);
+  }
+}
+@keyframes bob_text {
+  0% {
+    -webkit-transform: translate3d(0px, -2px, 0px);
+    -moz-transform: translate3d(0px, -2px, 0px);
+    -ms-transform: translate3d(0px, -2px, 0px);
+    -o-transform: translate3d(0px, -2px, 0px);
+    transform: translate3d(0px, -2px, 0px);
+  }
+  100% {
+    -webkit-transform: translate3d(0px, 2px, 0px);
+    -moz-transform: translate3d(0px, 2px, 0px);
+    -ms-transform: translate3d(0px, 2px, 0px);
+    -o-transform: translate3d(0px, 2px, 0px);
+    transform: translate3d(0px, 2px, 0px);
+  }
+}
